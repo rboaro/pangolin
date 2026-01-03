@@ -1,0 +1,8 @@
+{
+  "TITLE": "Runtime Localization Demo",
+  "BTN_OK": "OK",
+  "PROMPT_NAME": "Type your name",
+  "CHK_ENABLE": "Enable output",
+  "ERR_NAME_REQUIRED": "Name is required.",
+  "MSG_HELLO_FMT": "Hello, %s!"
+}

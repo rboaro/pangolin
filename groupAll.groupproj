@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{20D571BC-1BCE-48FC-B7F0-495546D027E1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="drawingGraphics\DrawingGraphics.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\externalInterfaces\ExternalInterfaces.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\multiThreaading\MultiThreading.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\antiHacking\AntiHacking.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\logDebugging\LogDebbuging.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\cloudComputing\CloudComputing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\skinning\Skinning.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\multimedia\Multimedia.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Z:\Documents\dev\view\pangolin\multipleLanguages_FMX\MultipleLanguageFMX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DrawingGraphics">
+        <MSBuild Projects="drawingGraphics\DrawingGraphics.dproj"/>
+    </Target>
+    <Target Name="DrawingGraphics:Clean">
+        <MSBuild Projects="drawingGraphics\DrawingGraphics.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DrawingGraphics:Make">
+        <MSBuild Projects="drawingGraphics\DrawingGraphics.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExternalInterfaces">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\externalInterfaces\ExternalInterfaces.dproj"/>
+    </Target>
+    <Target Name="ExternalInterfaces:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\externalInterfaces\ExternalInterfaces.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExternalInterfaces:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\externalInterfaces\ExternalInterfaces.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MultiThreading">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multiThreaading\MultiThreading.dproj"/>
+    </Target>
+    <Target Name="MultiThreading:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multiThreaading\MultiThreading.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultiThreading:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multiThreaading\MultiThreading.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AntiHacking">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\antiHacking\AntiHacking.dproj"/>
+    </Target>
+    <Target Name="AntiHacking:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\antiHacking\AntiHacking.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AntiHacking:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\antiHacking\AntiHacking.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LogDebbuging">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\logDebugging\LogDebbuging.dproj"/>
+    </Target>
+    <Target Name="LogDebbuging:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\logDebugging\LogDebbuging.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LogDebbuging:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\logDebugging\LogDebbuging.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CloudComputing">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\cloudComputing\CloudComputing.dproj"/>
+    </Target>
+    <Target Name="CloudComputing:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\cloudComputing\CloudComputing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CloudComputing:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\cloudComputing\CloudComputing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Skinning">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\skinning\Skinning.dproj"/>
+    </Target>
+    <Target Name="Skinning:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\skinning\Skinning.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Skinning:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\skinning\Skinning.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Multimedia">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multimedia\Multimedia.dproj"/>
+    </Target>
+    <Target Name="Multimedia:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multimedia\Multimedia.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Multimedia:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multimedia\Multimedia.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MultipleLanguageFMX">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multipleLanguages_FMX\MultipleLanguageFMX.dproj"/>
+    </Target>
+    <Target Name="MultipleLanguageFMX:Clean">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multipleLanguages_FMX\MultipleLanguageFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultipleLanguageFMX:Make">
+        <MSBuild Projects="Z:\Documents\dev\view\pangolin\multipleLanguages_FMX\MultipleLanguageFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

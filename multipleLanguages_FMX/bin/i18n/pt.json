@@ -1,0 +1,8 @@
+{
+  "TITLE": "Demonstração de Idiomas em Runtime",
+  "BTN_OK": "OK",
+  "PROMPT_NAME": "Digite seu nome",
+  "CHK_ENABLE": "Ativar saída",
+  "ERR_NAME_REQUIRED": "O nome é obrigatório.",
+  "MSG_HELLO_FMT": "Olá, %s!"
+}

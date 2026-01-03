@@ -1,0 +1,8 @@
+{
+  "TITLE": "Demostración de Idiomas en Tiempo de Ejecución",
+  "BTN_OK": "Aceptar",
+  "PROMPT_NAME": "Escribe tu nombre",
+  "CHK_ENABLE": "Habilitar salida",
+  "ERR_NAME_REQUIRED": "El nombre es obligatorio.",
+  "MSG_HELLO_FMT": "¡Hola, %s!"
+}

@@ -1,3 +1,13 @@
 *.exe
 *.dcu
 *.res
+antiHacking/__history
+*.local
+*.identcache
+cloudComputing/__history
+drawingGraphics/__history
+externalInterfaces/__history
+logDebugging/__history
+multiThreaading/__history
+multipleLanguages_FMX/__history
+skinning/__history
