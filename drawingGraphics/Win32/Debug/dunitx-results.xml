@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="Z:\Documents\dev\view\pangolin\drawingGraphics\Win32\Debug\Test_DrawingGraphics_FrameAnimator.exe" total="4" errors="0" failures="1" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2026-01-03" time="0.012">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="Test_DrawingGraphics_FrameAnimator.exe" executed="true" result="Failure" success="False" time="0.012" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="Tests" executed="true" result="Failure" success="False" time="0.011" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TLaserFrameAnimatorTests" executed="True" result="Failure" success="False" time="0.011" >
+                <results>
+                  <test-case name="NextFrame_DecreasesScale" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="NextFrame_ResetsScaleWhenBelowMin" executed="True" result="Failure" success="False" time="0.004" asserts="0" >
+                    <failure>
+                      <message>
+                        <![CDATA[ Condition is False when True expected. [Scale should reset to ResetScale] ]]>
+                      </message>
+                      <stack-trace>
+                        <![CDATA[  ]]>
+                      </stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="SquareFrame_HasFourSegments" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="SquareFrame_CorrectCoordinatesAtKnownScale" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>

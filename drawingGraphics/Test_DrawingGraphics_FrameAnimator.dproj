@@ -1,14 +1,14 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{5D588010-0468-45A0-AB06-85134B9666D3}</ProjectGuid>
+        <ProjectGuid>{D0D0D686-26B0-4F91-BDEB-1345235B30FB}</ProjectGuid>
         <ProjectVersion>19.5</ProjectVersion>
-        <FrameworkType>FMX</FrameworkType>
+        <FrameworkType>None</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <TargetedPlatforms>3</TargetedPlatforms>
-        <AppType>Application</AppType>
-        <MainSource>DrawingGraphics.dpr</MainSource>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Console</AppType>
+        <MainSource>Test_DrawingGraphics_FrameAnimator.dpr</MainSource>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -34,27 +34,9 @@
         <Cfg_1>true</Cfg_1>
         <Base>true</Base>
     </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
-        <Cfg_1_Win64>true</Cfg_1_Win64>
-        <CfgParent>Cfg_1</CfgParent>
-        <Cfg_1>true</Cfg_1>
-        <Base>true</Base>
-    </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
         <Cfg_2>true</Cfg_2>
         <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
-        <Cfg_2_Win32>true</Cfg_2_Win32>
-        <CfgParent>Cfg_2</CfgParent>
-        <Cfg_2>true</Cfg_2>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
-        <Cfg_2_Win64>true</Cfg_2_Win64>
-        <CfgParent>Cfg_2</CfgParent>
-        <Cfg_2>true</Cfg_2>
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
@@ -66,31 +48,21 @@
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <UsingDelphiRTL>true</UsingDelphiRTL>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
-        <SanitizedProjectName>DrawingGraphics</SanitizedProjectName>
+        <DCC_UnitSearchPath>$(DUnitX);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <SanitizedProjectName>Test_DrawingGraphics_FrameAnimator</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>vclwinx;DataSnapServer;FMX_MediaLabBasicPkg;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;Mitov_VCL_CommunicationLab_Basic;appanalytics;IndyProtocols;vclx;FMX_FlexCel_Components;IndyIPClient;dbxcds;vcledge;Mitov_Runtime;SignalLabAdditionalPkg;bindcompvclwinx;Install;FmxTeeUI;FMX_InstrumentLabPkg;RtmRxDB280;emsedge;bindcompfmx;FlexCel_Pdf;DBXFirebirdDriver;TextLabBasicPkg;ControlLabPkg;StyleControls_d11Alexandria;inetdb;LogicLabBasicPkg;FireDACSqliteDriver;DbxClientDriver;OpenWireStudioHostPkg;FireDACASADriver;Tee;soapmidas;Mitov_VCL_AudioLab_Basic;TimingLabBasicPkg;vclactnband;TeeUI;Mitov_FMX_BasicLab;fmxFireDAC;dbexpress;OpenWireEditorBasicPkg;OpenWireStudioAudioHostPkg;FireDACInfxDriver;Mitov_VCL_VideoLab;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;SignalLabScopePkg;VideoLabBasicPkg;Mitov_FMX_Windows_VideoLab_Basic;LangMan_Registrator;vcltouch;fmxase;AudioLabEssentialPkg;DBXOdbcDriver;Mitov_VCL_VisionLab;dbrtl;FMX_FlexCel_Core;FireDACDBXDriver;FireDACOracleDriver;QRWRunDXE11_w64;fmxdae;TeeDB;OpenWireBindingFmxPkg;InstrumentLabDigitalPkg;FireDACMSAccDriver;SignalLabGenericBasicPkg;CustomIPTransport;FireDACMSSQLDriver;UserLabBasicPkg;FlexCel_XlsAdapter;VCL_FlexCel_Core;MapiMail;Mitov_VCL_AudioLab;DataSnapIndy10ServerTransport;Mitov_VCL_VideoLab_Additional;LangMan_Core;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;IndySystem;OpenWireEditorPkg;VideoLabAdditionalPkg;VideoLabPkg;FireDACTDataDriver;FMX_PlotLabPkg;LogicLabPkg;vcldb;OpenWireBindingDatabasePkg;SignalLabGenericPkg;IntelligenceLabPkg;FlexCel_Core;CommunicationLabPkg;vclFireDAC;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;RtmRxCtl280;Mitov_VCL_BasicLab;IndyCore;RESTBackendComponents;FMX_SignalLabScopePkg;OpenWireStudioVideoHostPkg;FlexCel_Render;Mitov_AnimationLab;bindcompdbx;FMX_InstrumentLabDigitalPkg;rtl;FireDACMySQLDriver;FireDACADSDriver;Mitov_VCL_AudioLab_Essential;Mitov_BasicLab;VCL_FlexCel_Components;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;InstrumentLabPkg;DBXSybaseASEDriver;SignalLabPkg;DBXDb2Driver;AudioLabBasicPkg;PlotLabPkg;LangMan_VCL;OpenWireBindingPkg;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;Mitov_VCL_Runtime;OpenWirePkg;MediaLabBasicPkg;AudioLabGenericBasicPkg;bindcompvcl;dsnap;VideoLabGenericBasicPkg;FMX_VideoLabBasicPkg;CommunicationLabBasicPkg;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;OpenWireBindingVclPkg;fmxobj;bindcompvclsmp;FMXTee;DataSnapNativeClient;VisionLabPkg;Mitov_VCL_VideoLab_Basic;FMX_UserLabBasicPkg;AudioLabPkg;DatasnapConnectorsFreePascal;soaprtl;SignalLabBasicPkg;MediaLabPkg;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>vclwinx;DataSnapServer;FMX_MediaLabBasicPkg;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;Mitov_VCL_CommunicationLab_Basic;appanalytics;IndyProtocols;vclx;FMX_FlexCel_Components;IndyIPClient;dbxcds;vcledge;Mitov_Runtime;SignalLabAdditionalPkg;bindcompvclwinx;Install;FmxTeeUI;FMX_InstrumentLabPkg;RtmRxDB280;emsedge;bindcompfmx;FlexCel_Pdf;DBXFirebirdDriver;TextLabBasicPkg;ControlLabPkg;madBasic_;StyleControls_d11Alexandria;inetdb;LogicLabBasicPkg;FireDACSqliteDriver;DbxClientDriver;OpenWireStudioHostPkg;FireDACASADriver;Tee;soapmidas;Mitov_VCL_AudioLab_Basic;TimingLabBasicPkg;vclactnband;TeeUI;Mitov_FMX_BasicLab;fmxFireDAC;dbexpress;OpenWireEditorBasicPkg;OpenWireStudioAudioHostPkg;FireDACInfxDriver;Mitov_VCL_VideoLab;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;SignalLabScopePkg;VideoLabBasicPkg;Mitov_FMX_Windows_VideoLab_Basic;LangMan_Registrator;vcltouch;fmxase;AudioLabEssentialPkg;DBXOdbcDriver;Mitov_VCL_VisionLab;dbrtl;FMX_FlexCel_Core;FireDACDBXDriver;FireDACOracleDriver;QRWRunDXE11_w64;fmxdae;TeeDB;OpenWireBindingFmxPkg;InstrumentLabDigitalPkg;FireDACMSAccDriver;SignalLabGenericBasicPkg;CustomIPTransport;FireDACMSSQLDriver;UserLabBasicPkg;FlexCel_XlsAdapter;VCL_FlexCel_Core;MapiMail;Mitov_VCL_AudioLab;DataSnapIndy10ServerTransport;Mitov_VCL_VideoLab_Additional;LangMan_Core;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;IndySystem;OpenWireEditorPkg;VideoLabAdditionalPkg;VideoLabPkg;FireDACTDataDriver;FMX_PlotLabPkg;LogicLabPkg;vcldb;OpenWireBindingDatabasePkg;SignalLabGenericPkg;IntelligenceLabPkg;FlexCel_Core;CommunicationLabPkg;vclFireDAC;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;RtmRxCtl280;Mitov_VCL_BasicLab;IndyCore;RESTBackendComponents;FMX_SignalLabScopePkg;OpenWireStudioVideoHostPkg;FlexCel_Render;Mitov_AnimationLab;bindcompdbx;FMX_InstrumentLabDigitalPkg;rtl;FireDACMySQLDriver;FireDACADSDriver;Mitov_VCL_AudioLab_Essential;Mitov_BasicLab;VCL_FlexCel_Components;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;InstrumentLabPkg;DBXSybaseASEDriver;SignalLabPkg;DBXDb2Driver;AudioLabBasicPkg;PlotLabPkg;LangMan_VCL;OpenWireBindingPkg;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;Mitov_VCL_Runtime;OpenWirePkg;MediaLabBasicPkg;AudioLabGenericBasicPkg;bindcompvcl;dsnap;VideoLabGenericBasicPkg;FMX_VideoLabBasicPkg;CommunicationLabBasicPkg;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;OpenWireBindingVclPkg;fmxobj;bindcompvclsmp;FMXTee;DataSnapNativeClient;VisionLabPkg;Mitov_VCL_VideoLab_Basic;FMX_UserLabBasicPkg;AudioLabPkg;DatasnapConnectorsFreePascal;soaprtl;SignalLabBasicPkg;MediaLabPkg;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>vclwinx;DataSnapServer;FMX_MediaLabBasicPkg;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;Mitov_VCL_CommunicationLab_Basic;appanalytics;IndyProtocols;vclx;FMX_FlexCel_Components;IndyIPClient;dbxcds;vcledge;Mitov_Runtime;SignalLabAdditionalPkg;bindcompvclwinx;FmxTeeUI;FMX_InstrumentLabPkg;emsedge;bindcompfmx;FlexCel_Pdf;DBXFirebirdDriver;TextLabBasicPkg;ControlLabPkg;StyleControls_d11Alexandria;inetdb;LogicLabBasicPkg;FireDACSqliteDriver;DbxClientDriver;OpenWireStudioHostPkg;FireDACASADriver;Tee;soapmidas;Mitov_VCL_AudioLab_Basic;TimingLabBasicPkg;vclactnband;TeeUI;Mitov_FMX_BasicLab;fmxFireDAC;dbexpress;OpenWireEditorBasicPkg;OpenWireStudioAudioHostPkg;FireDACInfxDriver;Mitov_VCL_VideoLab;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;SignalLabScopePkg;VideoLabBasicPkg;Mitov_FMX_Windows_VideoLab_Basic;vcltouch;fmxase;AudioLabEssentialPkg;DBXOdbcDriver;Mitov_VCL_VisionLab;dbrtl;FMX_FlexCel_Core;FireDACDBXDriver;FireDACOracleDriver;QRWRunDXE11_w64;fmxdae;TeeDB;OpenWireBindingFmxPkg;InstrumentLabDigitalPkg;FireDACMSAccDriver;SignalLabGenericBasicPkg;CustomIPTransport;FireDACMSSQLDriver;UserLabBasicPkg;FlexCel_XlsAdapter;VCL_FlexCel_Core;Mitov_VCL_AudioLab;DataSnapIndy10ServerTransport;Mitov_VCL_VideoLab_Additional;LangMan_Core;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;IndySystem;OpenWireEditorPkg;VideoLabAdditionalPkg;VideoLabPkg;FireDACTDataDriver;FMX_PlotLabPkg;LogicLabPkg;vcldb;OpenWireBindingDatabasePkg;SignalLabGenericPkg;IntelligenceLabPkg;FlexCel_Core;CommunicationLabPkg;vclFireDAC;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;Mitov_VCL_BasicLab;IndyCore;RESTBackendComponents;FMX_SignalLabScopePkg;OpenWireStudioVideoHostPkg;FlexCel_Render;Mitov_AnimationLab;bindcompdbx;FMX_InstrumentLabDigitalPkg;rtl;FireDACMySQLDriver;FireDACADSDriver;Mitov_VCL_AudioLab_Essential;Mitov_BasicLab;VCL_FlexCel_Components;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;InstrumentLabPkg;DBXSybaseASEDriver;SignalLabPkg;DBXDb2Driver;AudioLabBasicPkg;PlotLabPkg;LangMan_VCL;OpenWireBindingPkg;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;Mitov_VCL_Runtime;OpenWirePkg;MediaLabBasicPkg;AudioLabGenericBasicPkg;bindcompvcl;dsnap;VideoLabGenericBasicPkg;FMX_VideoLabBasicPkg;CommunicationLabBasicPkg;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;OpenWireBindingVclPkg;fmxobj;bindcompvclsmp;FMXTee;DataSnapNativeClient;VisionLabPkg;Mitov_VCL_VideoLab_Basic;FMX_UserLabBasicPkg;AudioLabPkg;DatasnapConnectorsFreePascal;soaprtl;SignalLabBasicPkg;MediaLabPkg;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
-        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
-        <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -104,14 +76,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <DCC_DcuOutput>.\dcu</DCC_DcuOutput>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <DCC_ExeOutput>.\bin</DCC_ExeOutput>
-        <VerInfo_Locale>1033</VerInfo_Locale>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -119,28 +83,12 @@
         <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-    </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="drawingGraphics.Main.pas">
-            <Form>frmDrawingGraphics</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
-        <DCCReference Include="drawingGraphics.Laser.Domain.pas"/>
-        <DCCReference Include="drawingGraphics.Laser.Renderer.OpenGL.pas"/>
-        <DCCReference Include="drawingGraphics.Laser.Controls.OpenGL.pas"/>
-        <DCCReference Include="drawingGraphics.Laser.Renderer.DX11.pas"/>
-        <DCCReference Include="drawingGraphics.Laser.Controls.DX11.pas"/>
-        <DCCReference Include="drawingGraphics.Laser.Renderer.OpenGL_V2.pas"/>
-        <DCCReference Include="drawingGraphics.Laser.FrameModel.pas"/>
         <DCCReference Include="drawingGraphics.Laser.FrameAnimation.pas"/>
+        <DCCReference Include="drawingGraphics.Laser.FrameModel.pas"/>
         <DCCReference Include="Tests.Laser.FrameAnimator.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -160,19 +108,8 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">DrawingGraphics.dpr</Source>
+                    <Source Name="MainSource">Test_DrawingGraphics_FrameAnimator.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\bcl\packages\d11\.\Win32\Release\dcltmsbcl280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\bcl\packages\d11\.\Win32\Release\dcltmsbcl280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\logging\packages\d11\.\Win32\Release\dclTMSLogging280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\logging\packages\d11\.\Win32\Release\dclTMSLogging280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\aurelius\packages\d11\.\Win32\Release\dclaurelius280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\aurelius\packages\d11\.\Win32\Release\dclaurelius280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\sparkle\packages\d11\.\Win32\Release\dclsparkle280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\sparkle\packages\d11\.\Win32\Release\dclsparkle280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\remotedb\packages\d11\.\Win32\Release\dclremotedb280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\remotedb\packages\d11\.\Win32\Release\dclremotedb280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\xdata\packages\d11\.\Win32\Release\dclxdata280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\xdata\packages\d11\.\Win32\Release\dclxdata280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\sphinx\packages\d11\.\Win32\Release\dclsphinx280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\sphinx\packages\d11\.\Win32\Release\dclsphinx280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
@@ -190,9 +127,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="bin\DrawingGraphics.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Win32\Debug\Test_DrawingGraphics_FrameAnimator.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>DrawingGraphics.exe</RemoteName>
+                        <RemoteName>Test_DrawingGraphics_FrameAnimator.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1021,7 +958,7 @@
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>
-                <Platform value="Win64">True</Platform>
+                <Platform value="Win64">False</Platform>
             </Platforms>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>

@@ -7,6 +7,9 @@ object frmDrawingGraphics: TfrmDrawingGraphics
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  OnHide = FormHide
   DesignerMasterStyle = 0
   object Rectangle1: TRectangle
     Align = Client
@@ -14,5 +17,12 @@ object frmDrawingGraphics: TfrmDrawingGraphics
     Size.Width = 640.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
+  end
+  object RenderTimer: TTimer
+    Enabled = False
+    Interval = 33
+    OnTimer = RenderTimerTimer
+    Left = 304
+    Top = 224
   end
 end
