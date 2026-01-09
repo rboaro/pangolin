@@ -36,6 +36,9 @@
         <Projects Include="GDI\GDI.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -143,14 +146,23 @@
     <Target Name="GDI:Make">
         <MSBuild Projects="GDI\GDI.dproj" Targets="Make"/>
     </Target>
+    <Target Name="OpenGL">
+        <MSBuild Projects="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj"/>
+    </Target>
+    <Target Name="OpenGL:Clean">
+        <MSBuild Projects="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenGL:Make">
+        <MSBuild Projects="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator;GDI"/>
+        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator;GDI;OpenGL"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean;GDI:Clean"/>
+        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean;GDI:Clean;OpenGL:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make;GDI:Make"/>
+        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make;GDI:Make;OpenGL:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

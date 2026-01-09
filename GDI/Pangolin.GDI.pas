@@ -16,7 +16,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure tmrAnimationTimer(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+
   private
     FShapes: TArray<IDrawable>;
     FAnimationStep: Single;
@@ -41,23 +41,7 @@ begin
   tmrAnimation.Enabled := True;
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
-var
-  LLogoPath: string;
-begin
-  LLogoPath := 'Pangolin.jpeg';
 
-  FShapes := [
-    // Existing shapes
-    TRectangleShape.Create(RectF(50, 50, 150, 150), TAlphaColors.Red),
-
-    // [NEW] The Animated Logo
-    // It will pop up from the center just like the others!
-    TImageShape.Create(RectF(200, 50, 300, 150), LLogoPath),
-
-    TRectangleShape.Create(RectF(350, 50, 450, 150), TAlphaColors.Blue)
-  ];
-end;
 
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -88,7 +72,7 @@ begin
     TRectangleShape.Create(RectF(50, 50, 150, 150), TAlphaColors.Red),
     TCircleShape.Create(RectF(200, 50, 300, 150), TAlphaColors.Green),
     TRectangleShape.Create(RectF(350, 50, 450, 150), TAlphaColors.Blue),
-    TImageShape.Create(RectF(200, 50, 350, 200), LLogoPath),
+    TImageShape.Create(RectF(500, 50, 600, 150), LLogoPath)
   ];
 end;
 
