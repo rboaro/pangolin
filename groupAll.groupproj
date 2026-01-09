@@ -33,6 +33,9 @@
         <Projects Include="Z:\Documents\dev\view\pangolin\drawingGraphics\Test_DrawingGraphics_FrameAnimator.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="GDI\GDI.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -131,14 +134,23 @@
     <Target Name="Test_DrawingGraphics_FrameAnimator:Make">
         <MSBuild Projects="Z:\Documents\dev\view\pangolin\drawingGraphics\Test_DrawingGraphics_FrameAnimator.dproj" Targets="Make"/>
     </Target>
+    <Target Name="GDI">
+        <MSBuild Projects="GDI\GDI.dproj"/>
+    </Target>
+    <Target Name="GDI:Clean">
+        <MSBuild Projects="GDI\GDI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GDI:Make">
+        <MSBuild Projects="GDI\GDI.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator"/>
+        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator;GDI"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean"/>
+        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean;GDI:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make"/>
+        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make;GDI:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

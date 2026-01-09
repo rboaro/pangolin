@@ -1,37 +1,17 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{0882B37C-E0DD-460D-92AB-BCFFC50F8389}</ProjectGuid>
+        <ProjectGuid>{224F250D-75B4-4D86-B6DC-487D079F8B6E}</ProjectGuid>
         <ProjectVersion>20.3</ProjectVersion>
-        <FrameworkType>FMX</FrameworkType>
+        <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <ProjectName Condition="'$(ProjectName)'==''">GDI</ProjectName>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
-        <MainSource>MultipleLanguageFMX.dpr</MainSource>
-        <ProjectName Condition="'$(ProjectName)'==''">MultipleLanguageFMX</ProjectName>
+        <MainSource>GDI.dpr</MainSource>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Base)'=='true') or '$(Base_Android)'!=''">
-        <Base_Android>true</Base_Android>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Android64' and '$(Base)'=='true') or '$(Base_Android64)'!=''">
-        <Base_Android64>true</Base_Android64>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='OSX64' and '$(Base)'=='true') or '$(Base_OSX64)'!=''">
-        <Base_OSX64>true</Base_OSX64>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='OSXARM64' and '$(Base)'=='true') or '$(Base_OSXARM64)'!=''">
-        <Base_OSXARM64>true</Base_OSXARM64>
-        <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
@@ -79,101 +59,36 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_DcuOutput>.\dcu</DCC_DcuOutput>
-        <DCC_ExeOutput>.\bin</DCC_ExeOutput>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
         <DCC_S>false</DCC_S>
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
-        <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
-        <SanitizedProjectName>MultipleLanguageFMX</SanitizedProjectName>
-        <VerInfo_Locale>1046</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <AUP_ACCESS_COARSE_LOCATION>true</AUP_ACCESS_COARSE_LOCATION>
-        <AUP_ACCESS_FINE_LOCATION>true</AUP_ACCESS_FINE_LOCATION>
-        <AUP_CALL_PHONE>true</AUP_CALL_PHONE>
-        <AUP_CAMERA>true</AUP_CAMERA>
-        <AUP_INTERNET>true</AUP_INTERNET>
-        <AUP_READ_EXTERNAL_STORAGE>true</AUP_READ_EXTERNAL_STORAGE>
-        <AUP_WRITE_EXTERNAL_STORAGE>true</AUP_WRITE_EXTERNAL_STORAGE>
-        <AUP_READ_PHONE_STATE>true</AUP_READ_PHONE_STATE>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Base_Android)'!=''">
-        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=;minSdkVersion=23;targetSdkVersion=35</VerInfo_Keys>
-        <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <Android_LauncherIcon36>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png</Android_LauncherIcon36>
-        <Android_LauncherIcon48>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png</Android_LauncherIcon48>
-        <Android_LauncherIcon72>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png</Android_LauncherIcon72>
-        <Android_LauncherIcon96>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png</Android_LauncherIcon96>
-        <Android_LauncherIcon144>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png</Android_LauncherIcon144>
-        <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
-        <Android_SplashImage426>$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png</Android_SplashImage426>
-        <Android_SplashImage470>$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png</Android_SplashImage470>
-        <Android_SplashImage640>$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png</Android_SplashImage640>
-        <Android_SplashImage960>$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png</Android_SplashImage960>
-        <Android_NotificationIcon24>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png</Android_NotificationIcon24>
-        <Android_NotificationIcon36>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png</Android_NotificationIcon36>
-        <Android_NotificationIcon48>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png</Android_NotificationIcon48>
-        <Android_NotificationIcon72>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png</Android_NotificationIcon72>
-        <Android_NotificationIcon96>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png</Android_NotificationIcon96>
-        <EnabledSysJars>activity-1.7.2.dex.jar;annotation-experimental-1.4.1.dex.jar;annotation-jvm-1.8.1.dex.jar;annotations-13.0.dex.jar;appcompat-1.2.0.dex.jar;appcompat-resources-1.2.0.dex.jar;billing-7.1.1.dex.jar;biometric-1.1.0.dex.jar;browser-1.4.0.dex.jar;cloud-messaging.dex.jar;collection-jvm-1.4.2.dex.jar;concurrent-futures-1.1.0.dex.jar;core-1.15.0.dex.jar;core-common-2.2.0.dex.jar;core-ktx-1.15.0.dex.jar;core-runtime-2.2.0.dex.jar;cursoradapter-1.0.0.dex.jar;customview-1.0.0.dex.jar;documentfile-1.0.0.dex.jar;drawerlayout-1.0.0.dex.jar;error_prone_annotations-2.9.0.dex.jar;exifinterface-1.3.6.dex.jar;firebase-annotations-16.2.0.dex.jar;firebase-common-20.3.1.dex.jar;firebase-components-17.1.0.dex.jar;firebase-datatransport-18.1.7.dex.jar;firebase-encoders-17.0.0.dex.jar;firebase-encoders-json-18.0.0.dex.jar;firebase-encoders-proto-16.0.0.dex.jar;firebase-iid-interop-17.1.0.dex.jar;firebase-installations-17.1.3.dex.jar;firebase-installations-interop-17.1.0.dex.jar;firebase-measurement-connector-19.0.0.dex.jar;firebase-messaging-23.1.2.dex.jar;fmx.dex.jar;fragment-1.2.5.dex.jar;google-play-licensing.dex.jar;interpolator-1.0.0.dex.jar;javax.inject-1.dex.jar;kotlin-stdlib-1.8.22.dex.jar;kotlin-stdlib-common-1.8.22.dex.jar;kotlin-stdlib-jdk7-1.8.22.dex.jar;kotlin-stdlib-jdk8-1.8.22.dex.jar;kotlinx-coroutines-android-1.6.4.dex.jar;kotlinx-coroutines-core-jvm-1.6.4.dex.jar;legacy-support-core-utils-1.0.0.dex.jar;lifecycle-common-2.6.2.dex.jar;lifecycle-livedata-2.6.2.dex.jar;lifecycle-livedata-core-2.6.2.dex.jar;lifecycle-runtime-2.6.2.dex.jar;lifecycle-service-2.6.2.dex.jar;lifecycle-viewmodel-2.6.2.dex.jar;lifecycle-viewmodel-savedstate-2.6.2.dex.jar;listenablefuture-1.0.dex.jar;loader-1.0.0.dex.jar;localbroadcastmanager-1.0.0.dex.jar;okio-jvm-3.4.0.dex.jar;play-services-ads-22.2.0.dex.jar;play-services-ads-base-22.2.0.dex.jar;play-services-ads-identifier-18.0.0.dex.jar;play-services-ads-lite-22.2.0.dex.jar;play-services-appset-16.0.1.dex.jar;play-services-base-18.5.0.dex.jar;play-services-basement-18.4.0.dex.jar;play-services-cloud-messaging-17.0.1.dex.jar;play-services-location-21.0.1.dex.jar;play-services-maps-18.1.0.dex.jar;play-services-measurement-base-20.1.2.dex.jar;play-services-measurement-sdk-api-20.1.2.dex.jar;play-services-stats-17.0.2.dex.jar;play-services-tasks-18.2.0.dex.jar;print-1.0.0.dex.jar;profileinstaller-1.3.0.dex.jar;room-common-2.2.5.dex.jar;room-runtime-2.2.5.dex.jar;savedstate-1.2.1.dex.jar;sqlite-2.1.0.dex.jar;sqlite-framework-2.1.0.dex.jar;startup-runtime-1.1.1.dex.jar;tracing-1.2.0.dex.jar;transport-api-3.0.0.dex.jar;transport-backend-cct-3.1.8.dex.jar;transport-runtime-3.1.8.dex.jar;user-messaging-platform-2.0.0.dex.jar;vectordrawable-1.1.0.dex.jar;vectordrawable-animated-1.1.0.dex.jar;versionedparcelable-1.1.1.dex.jar;viewpager-1.0.0.dex.jar;work-runtime-2.7.0.dex.jar</EnabledSysJars>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Base_Android64)'!=''">
-        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=;minSdkVersion=23;targetSdkVersion=35</VerInfo_Keys>
-        <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <Android_LauncherIcon36>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png</Android_LauncherIcon36>
-        <Android_LauncherIcon48>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png</Android_LauncherIcon48>
-        <Android_LauncherIcon72>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png</Android_LauncherIcon72>
-        <Android_LauncherIcon96>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png</Android_LauncherIcon96>
-        <Android_LauncherIcon144>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png</Android_LauncherIcon144>
-        <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
-        <Android_SplashImage426>$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png</Android_SplashImage426>
-        <Android_SplashImage470>$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png</Android_SplashImage470>
-        <Android_SplashImage640>$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png</Android_SplashImage640>
-        <Android_SplashImage960>$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png</Android_SplashImage960>
-        <Android_NotificationIcon24>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png</Android_NotificationIcon24>
-        <Android_NotificationIcon36>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png</Android_NotificationIcon36>
-        <Android_NotificationIcon48>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png</Android_NotificationIcon48>
-        <Android_NotificationIcon72>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png</Android_NotificationIcon72>
-        <Android_NotificationIcon96>$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png</Android_NotificationIcon96>
-        <EnabledSysJars>activity-1.7.2.dex.jar;annotation-experimental-1.4.1.dex.jar;annotation-jvm-1.8.1.dex.jar;annotations-13.0.dex.jar;appcompat-1.2.0.dex.jar;appcompat-resources-1.2.0.dex.jar;billing-7.1.1.dex.jar;biometric-1.1.0.dex.jar;browser-1.4.0.dex.jar;cloud-messaging.dex.jar;collection-jvm-1.4.2.dex.jar;concurrent-futures-1.1.0.dex.jar;core-1.15.0.dex.jar;core-common-2.2.0.dex.jar;core-ktx-1.15.0.dex.jar;core-runtime-2.2.0.dex.jar;cursoradapter-1.0.0.dex.jar;customview-1.0.0.dex.jar;documentfile-1.0.0.dex.jar;drawerlayout-1.0.0.dex.jar;error_prone_annotations-2.9.0.dex.jar;exifinterface-1.3.6.dex.jar;firebase-annotations-16.2.0.dex.jar;firebase-common-20.3.1.dex.jar;firebase-components-17.1.0.dex.jar;firebase-datatransport-18.1.7.dex.jar;firebase-encoders-17.0.0.dex.jar;firebase-encoders-json-18.0.0.dex.jar;firebase-encoders-proto-16.0.0.dex.jar;firebase-iid-interop-17.1.0.dex.jar;firebase-installations-17.1.3.dex.jar;firebase-installations-interop-17.1.0.dex.jar;firebase-measurement-connector-19.0.0.dex.jar;firebase-messaging-23.1.2.dex.jar;fmx.dex.jar;fragment-1.2.5.dex.jar;google-play-licensing.dex.jar;interpolator-1.0.0.dex.jar;javax.inject-1.dex.jar;kotlin-stdlib-1.8.22.dex.jar;kotlin-stdlib-common-1.8.22.dex.jar;kotlin-stdlib-jdk7-1.8.22.dex.jar;kotlin-stdlib-jdk8-1.8.22.dex.jar;kotlinx-coroutines-android-1.6.4.dex.jar;kotlinx-coroutines-core-jvm-1.6.4.dex.jar;legacy-support-core-utils-1.0.0.dex.jar;lifecycle-common-2.6.2.dex.jar;lifecycle-livedata-2.6.2.dex.jar;lifecycle-livedata-core-2.6.2.dex.jar;lifecycle-runtime-2.6.2.dex.jar;lifecycle-service-2.6.2.dex.jar;lifecycle-viewmodel-2.6.2.dex.jar;lifecycle-viewmodel-savedstate-2.6.2.dex.jar;listenablefuture-1.0.dex.jar;loader-1.0.0.dex.jar;localbroadcastmanager-1.0.0.dex.jar;okio-jvm-3.4.0.dex.jar;play-services-ads-22.2.0.dex.jar;play-services-ads-base-22.2.0.dex.jar;play-services-ads-identifier-18.0.0.dex.jar;play-services-ads-lite-22.2.0.dex.jar;play-services-appset-16.0.1.dex.jar;play-services-base-18.5.0.dex.jar;play-services-basement-18.4.0.dex.jar;play-services-cloud-messaging-17.0.1.dex.jar;play-services-location-21.0.1.dex.jar;play-services-maps-18.1.0.dex.jar;play-services-measurement-base-20.1.2.dex.jar;play-services-measurement-sdk-api-20.1.2.dex.jar;play-services-stats-17.0.2.dex.jar;play-services-tasks-18.2.0.dex.jar;print-1.0.0.dex.jar;profileinstaller-1.3.0.dex.jar;room-common-2.2.5.dex.jar;room-runtime-2.2.5.dex.jar;savedstate-1.2.1.dex.jar;sqlite-2.1.0.dex.jar;sqlite-framework-2.1.0.dex.jar;startup-runtime-1.1.1.dex.jar;tracing-1.2.0.dex.jar;transport-api-3.0.0.dex.jar;transport-backend-cct-3.1.8.dex.jar;transport-runtime-3.1.8.dex.jar;user-messaging-platform-2.0.0.dex.jar;vectordrawable-1.1.0.dex.jar;vectordrawable-animated-1.1.0.dex.jar;versionedparcelable-1.1.1.dex.jar;viewpager-1.0.0.dex.jar;work-runtime-2.7.0.dex.jar</EnabledSysJars>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Base_OSX64)'!=''">
-        <VerInfo_Keys>CFBundleName=$(MSBuildProjectName);CFBundleDisplayName=$(MSBuildProjectName);CFBundleIdentifier=$(MSBuildProjectName);CFBundleVersion=1.0.0;CFBundleShortVersionString=1.0.0;CFBundlePackageType=APPL;CFBundleSignature=????;CFBundleAllowMixedLocalizations=YES;CFBundleExecutable=$(MSBuildProjectName);NSHighResolutionCapable=true;LSApplicationCategoryType=public.app-category.utilities;NSLocationUsageDescription=The reason for accessing the location information of the user;NSContactsUsageDescription=The reason for accessing the contacts;NSCalendarsUsageDescription=The reason for accessing the calendar data;NSRemindersUsageDescription=The reason for accessing the reminders;NSCameraUsageDescription=The reason for accessing the camera;NSMicrophoneUsageDescription=The reason for accessing the microphone;NSMotionUsageDescription=The reason for accessing the accelerometer;NSDesktopFolderUsageDescription=The reason for accessing the Desktop folder;NSDocumentsFolderUsageDescription=The reason for accessing the Documents folder;NSDownloadsFolderUsageDescription=The reason for accessing the Downloads folder;NSNetworkVolumesUsageDescription=The reason for accessing files on a network volume;NSRemovableVolumesUsageDescription=The reason for accessing files on a removable volume;NSSpeechRecognitionUsageDescription=The reason for requesting to send user data to Apple&apos;s speech recognition servers;ITSAppUsesNonExemptEncryption=false;NSBluetoothAlwaysUsageDescription=The reason for accessing the Bluetooth interface</VerInfo_Keys>
-        <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Base_OSXARM64)'!=''">
-        <VerInfo_Keys>CFBundleName=$(MSBuildProjectName);CFBundleDisplayName=$(MSBuildProjectName);CFBundleIdentifier=$(MSBuildProjectName);CFBundleVersion=1.0.0;CFBundleShortVersionString=1.0.0;CFBundlePackageType=APPL;CFBundleSignature=????;CFBundleAllowMixedLocalizations=YES;CFBundleExecutable=$(MSBuildProjectName);NSHighResolutionCapable=true;LSApplicationCategoryType=public.app-category.utilities;NSLocationUsageDescription=The reason for accessing the location information of the user;NSContactsUsageDescription=The reason for accessing the contacts;NSCalendarsUsageDescription=The reason for accessing the calendar data;NSRemindersUsageDescription=The reason for accessing the reminders;NSCameraUsageDescription=The reason for accessing the camera;NSMicrophoneUsageDescription=The reason for accessing the microphone;NSMotionUsageDescription=The reason for accessing the accelerometer;NSDesktopFolderUsageDescription=The reason for accessing the Desktop folder;NSDocumentsFolderUsageDescription=The reason for accessing the Documents folder;NSDownloadsFolderUsageDescription=The reason for accessing the Downloads folder;NSNetworkVolumesUsageDescription=The reason for accessing files on a network volume;NSRemovableVolumesUsageDescription=The reason for accessing files on a removable volume;NSSpeechRecognitionUsageDescription=The reason for requesting to send user data to Apple&apos;s speech recognition servers;ITSAppUsesNonExemptEncryption=false;NSBluetoothAlwaysUsageDescription=The reason for accessing the Bluetooth interface</VerInfo_Keys>
-        <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <SanitizedProjectName>GDI</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>vclwinx;DataSnapServer;FMX_MediaLabBasicPkg;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;Mitov_VCL_CommunicationLab_Basic;appanalytics;IndyProtocols;vclx;FMX_FlexCel_Components;IndyIPClient;dbxcds;vcledge;Mitov_Runtime;SignalLabAdditionalPkg;bindcompvclwinx;Install;FmxTeeUI;FMX_InstrumentLabPkg;RtmRxDB280;emsedge;bindcompfmx;FlexCel_Pdf;DBXFirebirdDriver;TextLabBasicPkg;ControlLabPkg;madBasic_;StyleControls_d11Alexandria;inetdb;LogicLabBasicPkg;FireDACSqliteDriver;DbxClientDriver;OpenWireStudioHostPkg;FireDACASADriver;Tee;soapmidas;Mitov_VCL_AudioLab_Basic;TimingLabBasicPkg;vclactnband;TeeUI;Mitov_FMX_BasicLab;fmxFireDAC;dbexpress;OpenWireEditorBasicPkg;OpenWireStudioAudioHostPkg;FireDACInfxDriver;Mitov_VCL_VideoLab;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;SignalLabScopePkg;VideoLabBasicPkg;Mitov_FMX_Windows_VideoLab_Basic;LangMan_Registrator;vcltouch;fmxase;AudioLabEssentialPkg;DBXOdbcDriver;Mitov_VCL_VisionLab;dbrtl;FMX_FlexCel_Core;FireDACDBXDriver;FireDACOracleDriver;QRWRunDXE11_w64;fmxdae;TeeDB;OpenWireBindingFmxPkg;InstrumentLabDigitalPkg;FireDACMSAccDriver;SignalLabGenericBasicPkg;CustomIPTransport;FireDACMSSQLDriver;UserLabBasicPkg;FlexCel_XlsAdapter;VCL_FlexCel_Core;MapiMail;Mitov_VCL_AudioLab;DataSnapIndy10ServerTransport;Mitov_VCL_VideoLab_Additional;LangMan_Core;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;IndySystem;OpenWireEditorPkg;VideoLabAdditionalPkg;VideoLabPkg;FireDACTDataDriver;FMX_PlotLabPkg;LogicLabPkg;vcldb;OpenWireBindingDatabasePkg;SignalLabGenericPkg;IntelligenceLabPkg;FlexCel_Core;CommunicationLabPkg;vclFireDAC;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;RtmRxCtl280;Mitov_VCL_BasicLab;IndyCore;RESTBackendComponents;FMX_SignalLabScopePkg;OpenWireStudioVideoHostPkg;FlexCel_Render;Mitov_AnimationLab;bindcompdbx;FMX_InstrumentLabDigitalPkg;rtl;FireDACMySQLDriver;FireDACADSDriver;Mitov_VCL_AudioLab_Essential;Mitov_BasicLab;VCL_FlexCel_Components;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;InstrumentLabPkg;DBXSybaseASEDriver;SignalLabPkg;DBXDb2Driver;AudioLabBasicPkg;PlotLabPkg;LangMan_VCL;OpenWireBindingPkg;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;Mitov_VCL_Runtime;OpenWirePkg;MediaLabBasicPkg;AudioLabGenericBasicPkg;bindcompvcl;dsnap;VideoLabGenericBasicPkg;FMX_VideoLabBasicPkg;CommunicationLabBasicPkg;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;OpenWireBindingVclPkg;fmxobj;bindcompvclsmp;FMXTee;DataSnapNativeClient;VisionLabPkg;Mitov_VCL_VideoLab_Basic;FMX_UserLabBasicPkg;AudioLabPkg;DatasnapConnectorsFreePascal;soaprtl;SignalLabBasicPkg;MediaLabPkg;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>vclwinx;DataSnapServer;dxComnRS37;bdertl;fmx;dxDockingRS37;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FMX_FlexCel_Components;dxCoreRS37;IndyProtocols;dxServerModeRS37;vclx;Skia.Package.RTL;cxPivotGridRS37;dbxcds;vcledge;dxSpreadSheetConditionalFormattingDialogsRS37;dxEMFRS37;dxPScxTLLnkRS37;FmxTeeUI;dxPSCoreRS37;FlexCel_Pdf;dxPSPrVwRibbonRS37;DBXFirebirdDriver;cxIBXAdaptersRS37;dxRichEditDocumentModelRS37;FireDACSqliteDriver;DbxClientDriver;dxPSdxDBTVLnkRS37;soapmidas;TeeUI;dxPScxExtCommonRS37;dbexpress;inet;vcltouch;FMX_FlexCel_Core;cxSchedulerWebServiceStorageRS37;FireDACDBXDriver;QRWRunDXE11_w64;fmxdae;dxTabbedMDIRS37;VCL_FlexCel_Core;CustomIPTransport;FireDACMSSQLDriver;dxFireDACEMFRS37;cxGridRS37;dxSpellCheckerRS37;cxFireDACAdaptersRS37;dxorgcRS37;IndySystem;dxBarRS37;dxCloudServiceLibraryRS37;dxPScxPCProdRS37;ibxbindings;dxPSRichEditControlLnkRS37;dxGDIPlusRS37;vclFireDAC;FlexCel_Render;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;cxADOAdaptersRS37;dxBarDBNavRS37;dxPDFViewerRS37;dxmdsRS37;dxPSdxOCLnkRS37;bindcompdbx;rtl;FireDACMySQLDriver;VCL_FlexCel_Components;dxADOEMFRS37;DBXSqliteDriver;dxPSdxDBOCLnkRS37;DBXSybaseASEDriver;cxSchedulerTreeBrowserRS37;dxChartControlRS37;cxGridEMFRS37;vclimg;DataSnapFireDAC;inetdbxpress;FireDAC;dxNavBarRS37;dxSpreadSheetCoreConditionalFormattingDialogsRS37;xmlrtl;dxPScxGridLnkRS37;dxADOServerModeRS37;ibxpress;dxWizardControlRS37;dsnap;FireDACDb2Driver;dxPScxSchedulerLnkRS37;DBXOracleDriver;DBXInformixDriver;vclib;dxHttpIndyRequestRS37;fmxobj;bindcompvclsmp;DataSnapNativeClient;dxSpreadSheetReportDesignerRS37;dxTileControlRS37;dxGaugeControlRS37;dxOrgChartAdvancedCustomizeFormRS37;DatasnapConnectorsFreePascal;vcldbx;dxPSdxMapControlLnkRS37;cxVerticalGridRS37;dxBarExtItemsRS37;cxLibraryRS37;cxBDEAdaptersRS37;dxdborRS37;dxSpreadSheetRS37;cxSchedulerGridRS37;emshosting;dxFlowChartAdvancedCustomizeFormRS37;dxPSDBTeeChartRS37;dxPSdxLCLnkRS37;FireDACCommonDriver;IndyIPClient;bindcompvclwinx;dxPSLnksRS37;dxPSTeeChartRS37;emsedge;bindcompfmx;cxTreeListRS37;dxFlowChartRS37;inetdb;ibmonitor;cxPivotGridChartRS37;dxFireDACServerModeRS37;FireDACASADriver;Tee;vclactnband;dxMapControlRS37;fmxFireDAC;FireDACInfxDriver;DBXMySQLDriver;VclSmp;DataSnapCommon;fmxase;cxSchedulerRibbonStyleEventEditorRS37;DBXOdbcDriver;dbrtl;dxPScxCommonRS37;FireDACOracleDriver;Skia.Package.FMX;dxPSdxSpreadSheetLnkRS37;dxPSdxChartControlLnkRS37;TeeDB;FlexCel_XlsAdapter;FireDACMSAccDriver;dxRichEditControlRS37;dxPsPrVwAdvRS37;dxPSdxPDFViewerLnkRS37;DataSnapIndy10ServerTransport;dxDBXServerModeRS37;cxSchedulerRS37;cxExportRS37;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;dxRichEditControlCoreRS37;FireDACTDataDriver;Skia.Package.VCL;dxPScxPivotGridLnkRS37;vcldb;dxBarExtDBItemsRS37;SynEditDR;FlexCel_Core;dxPSdxFCLnkRS37;bindcomp;inetstn;dxFlowChartLayoutsRS37;IndyCore;RESTBackendComponents;dxRibbonRS37;dxSpreadSheetCoreRS37;dxGanttControlRS37;dxPScxVGridLnkRS37;dxPSdxGaugeControlLnkRS37;FireDACADSDriver;RESTComponents;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;DataSnapClient;DataSnapProviderClient;dxSkinsCoreRS37;dxdbtrRS37;DBXDb2Driver;dxRichEditCoreRS37;cxTreeListdxBarPopupMenuRS37;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;dxRibbonCustomizationFormRS37;tethering;dxtrmdRS37;bindcompvcl;cxPivotGridOLAPRS37;dxFlowChartDesignerRS37;CloudService;DBXSybaseASADriver;FMXTee;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_UsePackage>vclwinx;DataSnapServer;FMX_MediaLabBasicPkg;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;Mitov_VCL_CommunicationLab_Basic;appanalytics;IndyProtocols;vclx;FMX_FlexCel_Components;IndyIPClient;dbxcds;vcledge;Mitov_Runtime;SignalLabAdditionalPkg;bindcompvclwinx;FmxTeeUI;FMX_InstrumentLabPkg;emsedge;bindcompfmx;FlexCel_Pdf;DBXFirebirdDriver;TextLabBasicPkg;ControlLabPkg;StyleControls_d11Alexandria;inetdb;LogicLabBasicPkg;FireDACSqliteDriver;DbxClientDriver;OpenWireStudioHostPkg;FireDACASADriver;Tee;soapmidas;Mitov_VCL_AudioLab_Basic;TimingLabBasicPkg;vclactnband;TeeUI;Mitov_FMX_BasicLab;fmxFireDAC;dbexpress;OpenWireEditorBasicPkg;OpenWireStudioAudioHostPkg;FireDACInfxDriver;Mitov_VCL_VideoLab;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;SignalLabScopePkg;VideoLabBasicPkg;Mitov_FMX_Windows_VideoLab_Basic;vcltouch;fmxase;AudioLabEssentialPkg;DBXOdbcDriver;Mitov_VCL_VisionLab;dbrtl;FMX_FlexCel_Core;FireDACDBXDriver;FireDACOracleDriver;QRWRunDXE11_w64;fmxdae;TeeDB;OpenWireBindingFmxPkg;InstrumentLabDigitalPkg;FireDACMSAccDriver;SignalLabGenericBasicPkg;CustomIPTransport;FireDACMSSQLDriver;UserLabBasicPkg;FlexCel_XlsAdapter;VCL_FlexCel_Core;Mitov_VCL_AudioLab;DataSnapIndy10ServerTransport;Mitov_VCL_VideoLab_Additional;LangMan_Core;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;IndySystem;OpenWireEditorPkg;VideoLabAdditionalPkg;VideoLabPkg;FireDACTDataDriver;FMX_PlotLabPkg;LogicLabPkg;vcldb;OpenWireBindingDatabasePkg;SignalLabGenericPkg;IntelligenceLabPkg;FlexCel_Core;CommunicationLabPkg;vclFireDAC;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;Mitov_VCL_BasicLab;IndyCore;RESTBackendComponents;FMX_SignalLabScopePkg;OpenWireStudioVideoHostPkg;FlexCel_Render;Mitov_AnimationLab;bindcompdbx;FMX_InstrumentLabDigitalPkg;rtl;FireDACMySQLDriver;FireDACADSDriver;Mitov_VCL_AudioLab_Essential;Mitov_BasicLab;VCL_FlexCel_Components;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;InstrumentLabPkg;DBXSybaseASEDriver;SignalLabPkg;DBXDb2Driver;AudioLabBasicPkg;PlotLabPkg;LangMan_VCL;OpenWireBindingPkg;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;Mitov_VCL_Runtime;OpenWirePkg;MediaLabBasicPkg;AudioLabGenericBasicPkg;bindcompvcl;dsnap;VideoLabGenericBasicPkg;FMX_VideoLabBasicPkg;CommunicationLabBasicPkg;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;OpenWireBindingVclPkg;fmxobj;bindcompvclsmp;FMXTee;DataSnapNativeClient;VisionLabPkg;Mitov_VCL_VideoLab_Basic;FMX_UserLabBasicPkg;AudioLabPkg;DatasnapConnectorsFreePascal;soaprtl;SignalLabBasicPkg;MediaLabPkg;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>vclwinx;DataSnapServer;dxComnRS37;fmx;dxDockingRS37;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FMX_FlexCel_Components;dxCoreRS37;IndyProtocols;dxServerModeRS37;vclx;cxPivotGridRS37;dbxcds;vcledge;dxSpreadSheetConditionalFormattingDialogsRS37;dxEMFRS37;dxPScxTLLnkRS37;FmxTeeUI;dxPSCoreRS37;FlexCel_Pdf;dxPSPrVwRibbonRS37;DBXFirebirdDriver;cxIBXAdaptersRS37;dxRichEditDocumentModelRS37;FireDACSqliteDriver;DbxClientDriver;dxPSdxDBTVLnkRS37;soapmidas;TeeUI;dxPScxExtCommonRS37;dbexpress;inet;vcltouch;FMX_FlexCel_Core;cxSchedulerWebServiceStorageRS37;FireDACDBXDriver;QRWRunDXE11_w64;fmxdae;dxTabbedMDIRS37;VCL_FlexCel_Core;CustomIPTransport;FireDACMSSQLDriver;dxFireDACEMFRS37;cxGridRS37;dxSpellCheckerRS37;cxFireDACAdaptersRS37;dxorgcRS37;IndySystem;dxBarRS37;dxCloudServiceLibraryRS37;dxPScxPCProdRS37;ibxbindings;dxPSRichEditControlLnkRS37;dxGDIPlusRS37;vclFireDAC;FlexCel_Render;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;cxADOAdaptersRS37;dxBarDBNavRS37;dxPDFViewerRS37;dxmdsRS37;dxPSdxOCLnkRS37;bindcompdbx;rtl;FireDACMySQLDriver;VCL_FlexCel_Components;dxADOEMFRS37;DBXSqliteDriver;dxPSdxDBOCLnkRS37;DBXSybaseASEDriver;cxSchedulerTreeBrowserRS37;dxChartControlRS37;cxGridEMFRS37;vclimg;DataSnapFireDAC;inetdbxpress;FireDAC;dxNavBarRS37;dxSpreadSheetCoreConditionalFormattingDialogsRS37;xmlrtl;dxPScxGridLnkRS37;dxADOServerModeRS37;ibxpress;dxWizardControlRS37;dsnap;FireDACDb2Driver;dxPScxSchedulerLnkRS37;DBXOracleDriver;DBXInformixDriver;vclib;dxHttpIndyRequestRS37;fmxobj;bindcompvclsmp;DataSnapNativeClient;dxSpreadSheetReportDesignerRS37;dxTileControlRS37;dxGaugeControlRS37;dxOrgChartAdvancedCustomizeFormRS37;DatasnapConnectorsFreePascal;dxPSdxMapControlLnkRS37;cxVerticalGridRS37;dxBarExtItemsRS37;cxLibraryRS37;cxBDEAdaptersRS37;dxdborRS37;dxSpreadSheetRS37;cxSchedulerGridRS37;emshosting;dxFlowChartAdvancedCustomizeFormRS37;dxPSDBTeeChartRS37;dxPSdxLCLnkRS37;FireDACCommonDriver;IndyIPClient;bindcompvclwinx;dxPSLnksRS37;dxPSTeeChartRS37;emsedge;bindcompfmx;cxTreeListRS37;dxFlowChartRS37;inetdb;ibmonitor;cxPivotGridChartRS37;dxFireDACServerModeRS37;FireDACASADriver;Tee;vclactnband;dxMapControlRS37;fmxFireDAC;FireDACInfxDriver;DBXMySQLDriver;VclSmp;DataSnapCommon;fmxase;cxSchedulerRibbonStyleEventEditorRS37;DBXOdbcDriver;dbrtl;dxPScxCommonRS37;FireDACOracleDriver;dxPSdxSpreadSheetLnkRS37;dxPSdxChartControlLnkRS37;TeeDB;FlexCel_XlsAdapter;FireDACMSAccDriver;dxRichEditControlRS37;dxPsPrVwAdvRS37;dxPSdxPDFViewerLnkRS37;DataSnapIndy10ServerTransport;dxDBXServerModeRS37;cxSchedulerRS37;cxExportRS37;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;dxRichEditControlCoreRS37;FireDACTDataDriver;Skia.Package.VCL;dxPScxPivotGridLnkRS37;vcldb;dxBarExtDBItemsRS37;SynEditDR;FlexCel_Core;dxPSdxFCLnkRS37;bindcomp;inetstn;dxFlowChartLayoutsRS37;IndyCore;RESTBackendComponents;dxRibbonRS37;dxSpreadSheetCoreRS37;dxGanttControlRS37;dxPScxVGridLnkRS37;dxPSdxGaugeControlLnkRS37;FireDACADSDriver;RESTComponents;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;DataSnapClient;DataSnapProviderClient;dxSkinsCoreRS37;dxdbtrRS37;DBXDb2Driver;dxRichEditCoreRS37;cxTreeListdxBarPopupMenuRS37;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;dxRibbonCustomizationFormRS37;tethering;dxtrmdRS37;bindcompvcl;cxPivotGridOLAPRS37;dxFlowChartDesignerRS37;CloudService;DBXSybaseASADriver;FMXTee;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -188,8 +103,6 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
@@ -210,13 +123,14 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="multipleLanguageFMX.Main.pas">
-            <Form>frmMain</Form>
-            <FormType>fmx</FormType>
+        <DCCReference Include="Pangolin.GDI.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="multipleLanguageFMX.i18n.LangManAdapter.pas"/>
-        <DCCReference Include="multipleLanguageFMX.i18n.DictionaryJson.pas"/>
-        <DCCReference Include="multipleLanguageFMX.i18n.Contracts.pas"/>
+        <DCCReference Include="GDI.Core.Contracts.pas"/>
+        <DCCReference Include="GDI.Infra.CanvasAdapter.pas"/>
+        <DCCReference Include="GDI.Domain.Shapes.pas"/>
+        <DCCReference Include="GDI.Test.Shapes.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -235,37 +149,16 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">MultipleLanguageFMX.dpr</Source>
+                    <Source Name="MainSource">GDI.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\bcl\packages\d11\.\Win32\Release\dcltmsbcl280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\bcl\packages\d11\.\Win32\Release\dcltmsbcl280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\logging\packages\d11\.\Win32\Release\dclTMSLogging280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\logging\packages\d11\.\Win32\Release\dclTMSLogging280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\aurelius\packages\d11\.\Win32\Release\dclaurelius280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\aurelius\packages\d11\.\Win32\Release\dclaurelius280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\sparkle\packages\d11\.\Win32\Release\dclsparkle280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\sparkle\packages\d11\.\Win32\Release\dclsparkle280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\remotedb\packages\d11\.\Win32\Release\dclremotedb280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\remotedb\packages\d11\.\Win32\Release\dclremotedb280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\xdata\packages\d11\.\Win32\Release\dclxdata280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\xdata\packages\d11\.\Win32\Release\dclxdata280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Mac\Home\Documents\tmssoftware\business11\sphinx\packages\d11\.\Win32\Release\dclsphinx280.bpl">File C:\Mac\Home\Documents\tmssoftware\business11\sphinx\packages\d11\.\Win32\Release\dclsphinx280.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="5">
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="iOSSimulator">
+                <DeployFile LocalName="Win32\Debug\GDI.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>GDI.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
-                    <Platform Name="iOSSimulator">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Win32\Debug\MultipleLanguageFMX.exe" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>
@@ -1218,10 +1111,6 @@
                 <ProjectRoot Platform="Win64x" Name="$(PROJECTNAME)"/>
             </Deployment>
             <Platforms>
-                <Platform value="Android">False</Platform>
-                <Platform value="Android64">False</Platform>
-                <Platform value="OSX64">False</Platform>
-                <Platform value="OSXARM64">False</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
