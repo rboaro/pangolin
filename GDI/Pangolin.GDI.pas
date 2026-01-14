@@ -11,7 +11,6 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     tmrAnimation: TTimer;
-    Button2: TButton;
     procedure FormPaint(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);

@@ -36,7 +36,19 @@
         <Projects Include="GDI\GDI.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj">
+        <Projects Include="OpenGL\OpenGL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Drag_and_Drop\DragAndDrop.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Firemonkey\BirdAnimation\BirdAnimation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Drag_and_Drop_Object\DragAndDropObject.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="pointer\WorkingWithPointer.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -147,22 +159,58 @@
         <MSBuild Projects="GDI\GDI.dproj" Targets="Make"/>
     </Target>
     <Target Name="OpenGL">
-        <MSBuild Projects="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj"/>
+        <MSBuild Projects="OpenGL\OpenGL.dproj"/>
     </Target>
     <Target Name="OpenGL:Clean">
-        <MSBuild Projects="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj" Targets="Clean"/>
+        <MSBuild Projects="OpenGL\OpenGL.dproj" Targets="Clean"/>
     </Target>
     <Target Name="OpenGL:Make">
-        <MSBuild Projects="..\..\..\embarcadero\Studio\Projects\OpenGL.dproj" Targets="Make"/>
+        <MSBuild Projects="OpenGL\OpenGL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DragAndDrop">
+        <MSBuild Projects="Drag_and_Drop\DragAndDrop.dproj"/>
+    </Target>
+    <Target Name="DragAndDrop:Clean">
+        <MSBuild Projects="Drag_and_Drop\DragAndDrop.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DragAndDrop:Make">
+        <MSBuild Projects="Drag_and_Drop\DragAndDrop.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BirdAnimation">
+        <MSBuild Projects="Firemonkey\BirdAnimation\BirdAnimation.dproj"/>
+    </Target>
+    <Target Name="BirdAnimation:Clean">
+        <MSBuild Projects="Firemonkey\BirdAnimation\BirdAnimation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BirdAnimation:Make">
+        <MSBuild Projects="Firemonkey\BirdAnimation\BirdAnimation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DragAndDropObject">
+        <MSBuild Projects="Drag_and_Drop_Object\DragAndDropObject.dproj"/>
+    </Target>
+    <Target Name="DragAndDropObject:Clean">
+        <MSBuild Projects="Drag_and_Drop_Object\DragAndDropObject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DragAndDropObject:Make">
+        <MSBuild Projects="Drag_and_Drop_Object\DragAndDropObject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WorkingWithPointer">
+        <MSBuild Projects="pointer\WorkingWithPointer.dproj"/>
+    </Target>
+    <Target Name="WorkingWithPointer:Clean">
+        <MSBuild Projects="pointer\WorkingWithPointer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WorkingWithPointer:Make">
+        <MSBuild Projects="pointer\WorkingWithPointer.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator;GDI;OpenGL"/>
+        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator;GDI;OpenGL;DragAndDrop;BirdAnimation;DragAndDropObject;WorkingWithPointer"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean;GDI:Clean;OpenGL:Clean"/>
+        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean;GDI:Clean;OpenGL:Clean;DragAndDrop:Clean;BirdAnimation:Clean;DragAndDropObject:Clean;WorkingWithPointer:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make;GDI:Make;OpenGL:Make"/>
+        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make;GDI:Make;OpenGL:Make;DragAndDrop:Make;BirdAnimation:Make;DragAndDropObject:Make;WorkingWithPointer:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

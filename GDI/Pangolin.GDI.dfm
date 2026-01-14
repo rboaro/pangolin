@@ -22,14 +22,6 @@ object Form1: TForm1
     TabOrder = 0
     OnClick = Button1Click
   end
-  object Button2: TButton
-    Left = 256
-    Top = 344
-    Width = 113
-    Height = 57
-    Caption = 'Pangolin Image'
-    TabOrder = 1
-  end
   object tmrAnimation: TTimer
     Enabled = False
     Interval = 300
