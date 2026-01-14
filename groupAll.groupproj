@@ -51,6 +51,18 @@
         <Projects Include="pointer\WorkingWithPointer.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="MoreAboutThreads\Advanced\ThreadAdvanced.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MoreAboutThreads\ManagementCancelation\ThreadCancelation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MoreAboutThreads\PPL\ThreadPPL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MoreAboutThreads\MobileComunicationExample\ThreadMobile.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -203,14 +215,50 @@
     <Target Name="WorkingWithPointer:Make">
         <MSBuild Projects="pointer\WorkingWithPointer.dproj" Targets="Make"/>
     </Target>
+    <Target Name="ThreadAdvanced">
+        <MSBuild Projects="MoreAboutThreads\Advanced\ThreadAdvanced.dproj"/>
+    </Target>
+    <Target Name="ThreadAdvanced:Clean">
+        <MSBuild Projects="MoreAboutThreads\Advanced\ThreadAdvanced.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThreadAdvanced:Make">
+        <MSBuild Projects="MoreAboutThreads\Advanced\ThreadAdvanced.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ThreadCancelation">
+        <MSBuild Projects="MoreAboutThreads\ManagementCancelation\ThreadCancelation.dproj"/>
+    </Target>
+    <Target Name="ThreadCancelation:Clean">
+        <MSBuild Projects="MoreAboutThreads\ManagementCancelation\ThreadCancelation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThreadCancelation:Make">
+        <MSBuild Projects="MoreAboutThreads\ManagementCancelation\ThreadCancelation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ThreadPPL">
+        <MSBuild Projects="MoreAboutThreads\PPL\ThreadPPL.dproj"/>
+    </Target>
+    <Target Name="ThreadPPL:Clean">
+        <MSBuild Projects="MoreAboutThreads\PPL\ThreadPPL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThreadPPL:Make">
+        <MSBuild Projects="MoreAboutThreads\PPL\ThreadPPL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ThreadMobile">
+        <MSBuild Projects="MoreAboutThreads\MobileComunicationExample\ThreadMobile.dproj"/>
+    </Target>
+    <Target Name="ThreadMobile:Clean">
+        <MSBuild Projects="MoreAboutThreads\MobileComunicationExample\ThreadMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThreadMobile:Make">
+        <MSBuild Projects="MoreAboutThreads\MobileComunicationExample\ThreadMobile.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator;GDI;OpenGL;DragAndDrop;BirdAnimation;DragAndDropObject;WorkingWithPointer"/>
+        <CallTarget Targets="DrawingGraphics;ExternalInterfaces;MultiThreading;AntiHacking;LogDebbuging;CloudComputing;Skinning;Multimedia;MultipleLanguageFMX;Test_DrawingGraphics_FrameAnimator;GDI;OpenGL;DragAndDrop;BirdAnimation;DragAndDropObject;WorkingWithPointer;ThreadAdvanced;ThreadCancelation;ThreadPPL;ThreadMobile"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean;GDI:Clean;OpenGL:Clean;DragAndDrop:Clean;BirdAnimation:Clean;DragAndDropObject:Clean;WorkingWithPointer:Clean"/>
+        <CallTarget Targets="DrawingGraphics:Clean;ExternalInterfaces:Clean;MultiThreading:Clean;AntiHacking:Clean;LogDebbuging:Clean;CloudComputing:Clean;Skinning:Clean;Multimedia:Clean;MultipleLanguageFMX:Clean;Test_DrawingGraphics_FrameAnimator:Clean;GDI:Clean;OpenGL:Clean;DragAndDrop:Clean;BirdAnimation:Clean;DragAndDropObject:Clean;WorkingWithPointer:Clean;ThreadAdvanced:Clean;ThreadCancelation:Clean;ThreadPPL:Clean;ThreadMobile:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make;GDI:Make;OpenGL:Make;DragAndDrop:Make;BirdAnimation:Make;DragAndDropObject:Make;WorkingWithPointer:Make"/>
+        <CallTarget Targets="DrawingGraphics:Make;ExternalInterfaces:Make;MultiThreading:Make;AntiHacking:Make;LogDebbuging:Make;CloudComputing:Make;Skinning:Make;Multimedia:Make;MultipleLanguageFMX:Make;Test_DrawingGraphics_FrameAnimator:Make;GDI:Make;OpenGL:Make;DragAndDrop:Make;BirdAnimation:Make;DragAndDropObject:Make;WorkingWithPointer:Make;ThreadAdvanced:Make;ThreadCancelation:Make;ThreadPPL:Make;ThreadMobile:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
